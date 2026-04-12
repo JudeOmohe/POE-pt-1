@@ -10,4 +10,12 @@ public class NewClass {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+    public static boolean Username(String user) {
+        if (user.contains("_") && user.length() <= 5) {
+            System.out.println("Username successfully captured.");
+            return true;
+        }
+        System.out.println("Username incorrectly formatted; must contain '_' and be max 5 chars.");
+        return false;
+    }
 }
