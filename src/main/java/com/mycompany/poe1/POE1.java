@@ -40,6 +40,29 @@ public class POE1 {
             phone = input.nextLine();
             if (Phone(phone)) break;
         }
+         System.out.println("REGRISTERATION WAS SUCCESSFUL");
+        
+       
+        System.out.println("\n--- LOGIN TO YOUR ACCOUNT ---");
+        
+        // === LOGIN SECTION ===
+        String loginUser = "";
+        String loginPass = "";
+        boolean loggedIn = false;
+
+        while (!loggedIn) {
+        System.out.print("Enter Username: ");
+        loginUser = input.nextLine();
+        System.out.print("Enter Password: ");
+        loginPass = input.nextLine();
+
+        // Check if entered credentials match what was registered
+        if (loginUser.equals(username) && loginPass.equals(password)) {
+        loggedIn = true;
+        } else {
+        System.out.println("Incorrect username or password. Please try again.");
+        }
+    }
             
            
     }
