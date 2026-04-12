@@ -30,4 +30,14 @@ public class NewClass {
         System.out.println("Password is not correctly formatted; must be 8+ chars with a capital, number, and symbol.");
         return false;
     }
+    public static boolean Phone(String phone) {
+        // Regex: Starts with +, followed by 1 to 10+ digits
+        String phoneRegex = "^\\+[0-9]{1,20}$";
+        if (Pattern.matches(phoneRegex, phone)) {
+            System.out.println("Cell phone number successfully added.");
+            return true;
+        }
+        System.out.println("Cell phone number incorrectly formatted or does not contain international code.");
+        return false;
+    }
 }

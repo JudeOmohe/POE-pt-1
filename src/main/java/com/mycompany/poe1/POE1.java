@@ -2,6 +2,7 @@
 package com.mycompany.poe1;
 
 import static com.mycompany.poe1.NewClass.Password;
+import static com.mycompany.poe1.NewClass.Phone;
 import static com.mycompany.poe1.NewClass.Username;
 import java.util.Scanner;
 
@@ -32,6 +33,15 @@ public class POE1 {
             password = input.nextLine();
             if (Password(password)) break;
         }
+        // 3. Loop for Phone Number
+        String phone = "";
+        while (true) {
+            System.out.print("Enter Cell Phone with country code: ");
+            phone = input.nextLine();
+            if (Phone(phone)) break;
+        }
+            
+           
     }
 }
         
