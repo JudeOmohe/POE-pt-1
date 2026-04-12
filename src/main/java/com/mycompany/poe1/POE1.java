@@ -1,6 +1,7 @@
 
 package com.mycompany.poe1;
 
+import static com.mycompany.poe1.NewClass.Password;
 import static com.mycompany.poe1.NewClass.Username;
 import java.util.Scanner;
 
@@ -23,6 +24,13 @@ public class POE1 {
             System.out.print("\nCreate Username: ");
             username = input.nextLine();
             if (Username(username)) break;
+        }
+        // 2. Loop for Password
+        String password = "";
+        while (true) {
+            System.out.print("Create Password: ");
+            password = input.nextLine();
+            if (Password(password)) break;
         }
     }
 }
