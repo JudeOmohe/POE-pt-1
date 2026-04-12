@@ -40,4 +40,7 @@ public class NewClass {
         System.out.println("Cell phone number incorrectly formatted or does not contain international code.");
         return false;
     }
+    public void Names(){
+        System.out.println("Welcome " + firstName + " " + lastName + " great to see you ");
+    }
 }

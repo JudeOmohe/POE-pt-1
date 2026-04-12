@@ -63,7 +63,11 @@ public class POE1 {
         System.out.println("Incorrect username or password. Please try again.");
         }
     }
-            
+        NewClass named = new NewClass(firstName, lastName);
+        
+        named.Names();
+        
+        System.out.println("All credentials captured correctly!");
            
     }
 }
