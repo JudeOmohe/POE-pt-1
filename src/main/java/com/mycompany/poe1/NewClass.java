@@ -53,8 +53,9 @@ public class NewClass {
         return "Registration successful! Username and password meet all requirements.";
     }
     public static boolean LoginUser(String User, String Password, String Username, String Pass) {
-    if (User.equals(Username) && Password.equals(Pass)) {
-        System.out.println("Login was successful");
+   
+    if(User.equals(Username) && Password.equals(Pass)){
+        System.out.println("Login was Successful");
         return true;
     }
     System.out.println("Login failed");

@@ -40,7 +40,11 @@ public class POE1 {
             System.out.print("Enter Cell Phone with country code: ");
             phone = input.nextLine();
             if (Phone(phone)) break;
+            
         }
+         String register = NewClass.registerUser(username, password);
+        System.out.println("\n" + register);
+        
          System.out.println("REGRISTERATION WAS SUCCESSFUL");
         
        
