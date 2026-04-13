@@ -1,6 +1,7 @@
 
 package com.mycompany.poe1;
 
+import static com.mycompany.poe1.NewClass.LoginUser;
 import static com.mycompany.poe1.NewClass.Password;
 import static com.mycompany.poe1.NewClass.Phone;
 import static com.mycompany.poe1.NewClass.Username;
@@ -46,22 +47,18 @@ public class POE1 {
         System.out.println("\n--- LOGIN TO YOUR ACCOUNT ---");
         
         // === LOGIN SECTION ===
-        String loginUser = "";
-        String loginPass = "";
-        boolean loggedIn = false;
+        String user = "";
+        String pass = "";
+       
 
-        while (!loggedIn) {
-        System.out.print("Enter Username: ");
-        loginUser = input.nextLine();
-        System.out.print("Enter Password: ");
-        loginPass = input.nextLine();
+        while (true) {
+            System.out.print("Enter Username: ");
+            user = input.nextLine();
+            System.out.print("Enter Password: ");
+            pass = input.nextLine();
+            if (LoginUser(user, pass, username, password)) break;
 
-        // Check if entered credentials match what was registered
-        if (loginUser.equals(username) && loginPass.equals(password)) {
-        loggedIn = true;
-        } else {
-        System.out.println("Incorrect username or password. Please try again.");
-        }
+        
     }
         NewClass named = new NewClass(firstName, lastName);
         
