@@ -40,7 +40,18 @@ public class NewClass {
         System.out.println("Cell phone number incorrectly formatted or does not contain international code.");
         return false;
     }
-    
+    public static String registerUser(String username, String password) {
+        boolean vUsername = Username(username);
+        boolean vPassword = Password(password);
+ 
+        if (!vUsername) {
+            return "Username is incorrectly formatted.";
+        }
+        if (!vPassword) {
+            return "Password does not meet the complexity requirements.";
+        }
+        return "Registration successful! Username and password meet all requirements.";
+    }
     public static boolean LoginUser(String User, String Password, String Username, String Pass) {
     if (User.equals(Username) && Password.equals(Pass)) {
         System.out.println("Login was successful");
