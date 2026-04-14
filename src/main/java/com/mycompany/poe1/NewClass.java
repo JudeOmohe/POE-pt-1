@@ -40,29 +40,35 @@ public class NewClass {
         System.out.println("Cell phone number incorrectly formatted or does not contain international code.");
         return false;
     }
-    public static String registerUser(String username, String password) {
-        boolean vUsername = Username(username);
-        boolean vPassword = Password(password);
+    public static String[] registerUser(String username, String password) {
+        if (!Username(username)) {
+            System.out.println("Registration failed: Username is incorrectly formatted.");
+            return null;
+        }
+        if (!Password(password)) {
+            System.out.println("Registration failed: Password does not meet the complexity requirements.");
+            return null;
+        }
+        System.out.println("Registration successful! Username and password meet all requirements.");
+        return new String[]{username, password};
+    
+    }
+    public static boolean loginUser(String User, String Password, String[] registeredCredentials) {
+        if (registeredCredentials == null) {
+            System.out.println("Login failed: No registered account found. Please register first.");
+            return false;
+        }
+        String registeredUsername = registeredCredentials[0];
+        String registeredPassword = registeredCredentials[1];
  
-        if (!vUsername) {
-            return "Username is incorrectly formatted.";
+        if (User.equals(registeredUsername) && Password.equals(registeredPassword)) {
+            System.out.println("Login was successful.");
+            return true;
         }
-        if (!vPassword) {
-            return "Password does not meet the complexity requirements.";
-        }
-        return "Registration successful! Username and password meet all requirements.";
+        System.out.println("Login failed. Incorrect username or password. Please try again.");
+        return false;
     }
-    public static boolean LoginUser(String User, String Password, String Username, String Pass) {
-   
-    if(User.equals(Username) && Password.equals(Pass)){
-        System.out.println("Login was Successful");
-        return true;
-    }
-    System.out.println("Login failed");
-    System.out.println("Incorrect username or password. Please try again.");
-    return false;
-
-    }
+ 
     
     public void Names(){
         System.out.println("Welcome " + firstName + " " + lastName + " great to see you ");

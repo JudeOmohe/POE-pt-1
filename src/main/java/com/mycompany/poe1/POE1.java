@@ -1,7 +1,7 @@
 
 package com.mycompany.poe1;
 
-import static com.mycompany.poe1.NewClass.LoginUser;
+
 import static com.mycompany.poe1.NewClass.Password;
 import static com.mycompany.poe1.NewClass.Phone;
 import static com.mycompany.poe1.NewClass.Username;
@@ -42,8 +42,8 @@ public class POE1 {
             if (Phone(phone)) break;
             
         }
-         String register = NewClass.registerUser(username, password);
-        System.out.println("\n" + register);
+         String[] registeredCredentials = NewClass.registerUser(username, password);
+ 
         
          System.out.println("REGRISTERATION WAS SUCCESSFUL");
         
@@ -60,7 +60,7 @@ public class POE1 {
             user = input.nextLine();
             System.out.print("Enter Password: ");
             pass = input.nextLine();
-            if (LoginUser(user, pass, username, password)) break;
+            if (NewClass.loginUser(user, password, registeredCredentials)) break;
 
         
     }
