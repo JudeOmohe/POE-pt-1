@@ -17,7 +17,7 @@ public class NewClass {
             System.out.println("Username successfully captured.");
             return true;
         }
-        System.out.println("Username incorrectly formatted; must contain '_' and be max 5 chars.");
+        System.out.println("Username incorrectly formatted");
         return false;
     }
     public static boolean Password(String password) {
@@ -27,7 +27,7 @@ public class NewClass {
             System.out.println("Password successfully captured.");
             return true;
         }   
-        System.out.println("Password is not correctly formatted; must be 8+ chars with a capital, number, and symbol.");
+        System.out.println("Password is not correctly formatted.");
         return false;
     }
     public static boolean Phone(String phone) {

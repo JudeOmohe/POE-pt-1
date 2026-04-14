@@ -23,6 +23,8 @@ public class POE1 {
     // 1. Loop for Username
         String username = "";
         while (true) {
+            
+            System.out.println(" \nMust contain '_' and be max 5 chars.");
             System.out.print("\nCreate Username: ");
             username = input.nextLine();
             if (Username(username)) break;
@@ -30,6 +32,7 @@ public class POE1 {
         // 2. Loop for Password
         String password = "";
         while (true) {
+            System.out.println("\nMust be 8+ chars with a capital, number, and symbol");
             System.out.print("Create Password: ");
             password = input.nextLine();
             if (Password(password)) break;
