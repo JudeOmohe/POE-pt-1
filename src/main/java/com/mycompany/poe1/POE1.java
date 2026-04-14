@@ -10,17 +10,21 @@ import java.util.Scanner;
 public class POE1 {
 
     public static void main(String[] args) {
+        // Create scanner to read user input
          Scanner input = new Scanner(System.in);
   
         
         System.out.println("=== ACCOUNT REGISTRATION ===");
         
+        
+        // Get the user's first and last name
         System.out.println("\nEnter first name:");
         String firstName = input.nextLine();
         System.out.println("\nEnter last name: ");
         String lastName = input.nextLine();
     
     // 1. Loop for Username
+    // Keep asking for a username until a valid one is entered
         String username = "";
         while (true) {
             
@@ -30,6 +34,7 @@ public class POE1 {
             if (Username(username)) break;
         }
         // 2. Loop for Password
+        // Keep asking for a password until a valid one is entered
         String password = "";
         while (true) {
             System.out.println("\nMust be 8+ chars with a capital, number, and symbol");
@@ -38,6 +43,7 @@ public class POE1 {
             if (Password(password)) break;
         }
         // 3. Loop for Phone Number
+        // Keep asking for a phone number until a valid one is entered
         String phone = "";
         while (true) {
             System.out.print("Enter Cell Phone with country code: ");
@@ -45,6 +51,7 @@ public class POE1 {
             if (Phone(phone)) break;
             
         }
+        // Register the user with the validated username and password
          String[] registeredCredentials = NewClass.registerUser(username, password);
  
         
@@ -56,8 +63,10 @@ public class POE1 {
         // === LOGIN SECTION ===
         String user = "";
         String pass = "";
-       
-
+        
+        
+       // 4. Loop for Login
+       // Keep asking for login details until they match the registered credentials
         while (true) {
             System.out.print("Enter Username: ");
             user = input.nextLine();
@@ -67,6 +76,7 @@ public class POE1 {
 
         
     }
+        // Create a user object and display the welcome message
         NewClass named = new NewClass(firstName, lastName);
         
         named.Names();
